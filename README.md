@@ -1,2 +1,2 @@
-# codigos-aulas
-Códigos das Aulas de Altoritmos e Programação
+# Códigos-Aulas
+Códigos das Aulas de Altoritmos e Programação da Ceulp/Ulbra 
