@@ -17,4 +17,12 @@ while i < 10:
         errou.append(i)
     else:
         acertos = acertos + 1
-    i = i + 1        
+    i = i + 1
+i = 0
+while i < len(errou):
+    print(errou[i])
+    i = i + 1
+if acerto >= 6:
+    print("Aprovado! ")
+else:
+    print("Reprovado! ")                
