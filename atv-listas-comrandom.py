@@ -22,4 +22,4 @@ while i >= len(numeros)-4:
     if numeros[i] < menor:
         menor = numeros[i]
     i = i - 1
-print(menor)        
+print("Menores: ", menor)        
