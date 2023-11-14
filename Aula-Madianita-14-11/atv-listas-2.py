@@ -8,7 +8,7 @@ cardapio = [['Cachorro-Quente', 5.00],
 print(cardapio)
 
 fechar = 'n'
-
+totalConta = 0
 while fechar == 'n':
     cod = int(input("Código do Produto: "))
     qt = int(input("Quantidade do Produto: "))
@@ -16,5 +16,11 @@ while fechar == 'n':
     fechar = input("Quer Fechar a Conta? (s ou n)")
 print("Valor da Conta: ", totalConta)
 
-
-
+i = 0
+sair = 'n'
+while i < len(cardapio) and sair != 'n':
+    desconto = float(input("Digite o Desconto: "))
+    produtoDesc = int(input("Digite o Produto: "))
+    cardapio[produtoDesc].append(desconto)
+    print("Cardapio: ", cardapio)
+    i = i + 1
