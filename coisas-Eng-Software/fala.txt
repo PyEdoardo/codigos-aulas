@@ -1,0 +1,43 @@
+Olá Boa Noite, vou explicar sobre o paradigma do Modelo Iterativo e Incremental de Desenvolvimento.
+
+# No modelo iterativo, o processo é dividido em ciclos curtos e repetitivos, 
+permitindo adaptações rápidas e uma constante validação do progresso. 
+Isso proporciona flexibilidade e rápida resposta às mudanças de requisitos, 
+mas pode exigir uma gestão cuidadosa do escopo e dos recursos.
+
+Vantagens Modelo Iterativo:
+
+- 1 Criação de um fluxo de entrega do softwares em que os requisitos são apresentados em pequenas partes funcionais.
+- 2 Maior capacidade de acompanhar a evolução o desenvolvimento da aplicação
+- 3 Identificação precisa de erro e falhas ddurante a criação o sistema.
+- 4 Redução de risco a cada etapa o projeto
+- 5 Maior capacidade de modificar a direção de um projeto.
+- 6 Capacidade de Otimizar a Ferramenta Continuamente.
+- 7 Escopo e Software mais flexível
+- 8 Segurança para a empresa e o empregado com respaldo legal por cada parte do processo de criação serem documentadas e valiadas
+
+Desvantagens Modelo Iterativo:
+
+- 1 Como durante o processo de desenvoltimento o sistema é adaptado e refinado, o final pode ser totalmente diferente do inicial.
+- 2 Novo requisitos podem estender indefinidamente o desenvolvimento o sistema.
+- 3 Gerentes acostumaos com o modelo cascata podem ter problemas ao migrar para esse modelo mais flexível.
+
+# Por outro lado, no modelo incremental, o desenvolvimento é dividido em etapas incrementais, 
+cada uma adicionando funcionalidades ao produto em desenvolvimento. 
+Isso permite uma rápida validação das decisões de design e uma melhor gestão de expectativas, 
+mas a estruturação dos incrementos pode ser complexa e a integração 
+contínua pode aumentar a complexidade do desenvolvimento.
+
+Vantagens Modelo Incremental:
+
+- 1 Os Clintes recebem partes funcionais o Software mais cedo, começando a obter valor rapidamente.
+- 2 Os Cliente fornecem feedback regular ao longo o desenvolvimento, permitino ajustes e garantino que o produto atenda ás suas necessidades.
+- 3 O Progresso do projeto é visível através da entrega de incrementos sucessivo, promovendo tranparência e confiança.
+- 4 Ao diviir o projeto em incrementos menores, os riscos são mitigaos e os desafios podem ser identificado e abordados mais cedo.
+
+Desvantagens Modelo Incremental:
+
+- 1 Toos os requisitos precisam ser conhecidos para decompor o produto em módulos.
+- 2 Não são tão aaptávei a mudanças nas exigências, a meno que combinaas com o trabalho em iterações.
+- 3 Prouto não estará completo até que cada peça esteja no lugar.
+- 4 Faer com que a peças trabalhem juntas requer esforço extra e pode ser um desafio.
