@@ -6,7 +6,7 @@ Aqui minhas infos:
 
 ### Oque é esse repositório?
 Aqui ficam os arquivos de estudos durante o curso de Engenharia de Software da CEULP / ULBRA.
-Deixo a disposição para uso pessoal e ajudar quem está começando, para melhor usabilidade, não abrir pelo celular os arquivos, e abrir no VSCode com suporte ao Jupyter Notebook.
+\nDeixo a disposição para uso pessoal e ajudar quem está começando, para melhor usabilidade, não abrir pelo celular os arquivos, e abrir no VSCode com suporte ao Jupyter Notebook.
 
 ### Sobre mim
 Sou estudante de Engenharia de Software na [@Ceulp/Ulbra](https://www.ulbra-to.com/).
