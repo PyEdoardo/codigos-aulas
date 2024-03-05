@@ -7,7 +7,7 @@ def triangulo (ladoA, ladoB, ladoC):
         else:
             resultado = 'Escaleno'
     else:
-        resultado = 'Nao e um triangulo'
+        resultado = 'Não e um triangulo'
     
     return resultado
 
