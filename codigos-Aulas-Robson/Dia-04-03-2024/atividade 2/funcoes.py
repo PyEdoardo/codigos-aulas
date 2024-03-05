@@ -81,7 +81,7 @@ def numero(valor):
 
 ## Nono:
 
-def peso_ideal (altura, sexo):
+def pesoIdeal (altura, sexo):
     if sexo == 'masculino':
         ideal = (72.7*altura) - 58
     elif sexo == 'feminino':

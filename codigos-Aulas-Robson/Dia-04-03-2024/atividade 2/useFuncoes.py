@@ -1,7 +1,7 @@
 import funcoes
 
 while True:
-    print("Seja bem-vindo ao programa usaFuncoes.py. Por favor, escolha a opção desejada: \n1 – Verifica número inteiro e retorna True ou False\n2 – Verifica se um número é positivo ou negativo\n3 – Verifica se um número é ímpar ou par\n4 - Realiza o cáluclo de médias ponderadas ou aritméticas\n5 - Transforma a idade informada em Dias\n6 - Ordena uma lista de 3 número\n7 - Tranforme Segundos em Horas, Minutos e Segundos\n8 - Verifique se um número é perfeito ou não\n9 - Calcula o Peso com base no sexo e altura\n10 - Recebe 3 Valores Reais e Verifica os Lados de um Triangulo\n0 - Sair")
+    print("\n1Seja bem-vindo ao programa usaFuncoes.py. Por favor, escolha a opção desejada: \n1 – Verifica número inteiro e retorna True ou False\n2 – Verifica se um número é positivo ou negativo\n3 – Verifica se um número é ímpar ou par\n4 - Realiza o cáluclo de médias ponderadas ou aritméticas\n5 - Transforma a idade informada em Dias\n6 - Ordena uma lista de 3 número\n7 - Tranforme Segundos em Horas, Minutos e Segundos\n8 - Verifique se um número é perfeito ou não\n9 - Calcula o Peso com base no sexo e altura\n10 - Recebe 3 Valores Reais e Verifica os Lados de um Triangulo\n0 - Sair\n")
     opcaoMenu = input("Digite Qual Opção a Desejada: ")
     if opcaoMenu == '1':
 
@@ -43,14 +43,31 @@ while True:
         num2 = int(input("Digite o 2 Inteiro:\n "))
         num3 = int(input("Digite o 3 Inteiro:\n "))
 
-        print(funcoes.no(num1, num2, num3))
+        print(funcoes.ordenarNumeros(num1, num2, num3))
 
     elif opcaoMenu == '7':
 
+        seg = int(input('Digite uma hora em segundos: '))
+        print(funcoes.horas(seg))
+
     elif opcaoMenu == '8':
+
+        num = int(input('Digite um numero para saber se e perfeito ou não: '))
+        print(f'{num} e numero perfeito? {funcoes.numero(num)} ')
 
     elif opcaoMenu == '9':
 
+        alt = float(input('Digite sua altura: '))
+        sex = input('Seu sexo: ')
+        print(funcoes.pesoIdeal(alt, sex))
+
     elif opcaoMenu == '10':
 
-    elif opcaoMenu == '0':            
+        dadosA = float(input('Digite o valor do ladoA: '))
+        dadosB = float(input('Digite o valor do ladoB: '))
+        dadosC = float(input('Digite o valor do ladoC: '))
+
+        print(funcoes.triangulo(dadosA, dadosB, dadosC))
+
+    elif opcaoMenu == '0':
+        break
