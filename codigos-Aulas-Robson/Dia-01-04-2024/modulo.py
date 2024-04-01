@@ -21,11 +21,13 @@ def remover(lista, num):
             nova_lista.append(i)
     return nova_lista        
 
-def popar(lista, num=-1):
-    removido = num
-    pop_lista = []
-    
-    return removido
+def popar(lista, num):
+    removido = lista[num]
+    lista_nova = []
+    for i in lista:
+        if i != removido:
+            lista_nova.append(i)
+    return (lista_nova, removido)         
 
 def indexar(lista, num):
     for i in range(len(lista)):

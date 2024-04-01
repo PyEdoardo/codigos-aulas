@@ -20,8 +20,18 @@ item_remover = int(input("Digite o Valor a ser Removido da Lista"))
 print(f'Item: {item_remover} removido da lista, resultado: \n{modulo.remover(lista, item_remover)}')
 
 # 5:
-indice_popado = int(input("Digite o indice para popar na Lista: "))
-print(f'Lista: {lista}, Item Popado: {modulo.popar(lista, indice_popado)}')
+indice = int(input("Digite o Indíce do item: "))
+(lista, numero) = modulo.popar(lista, indice)
+print(f'Item removido: {numero}, Nova Lista: {lista}')
 
+# 6:
+indice_num = int(input("Digite o Índice: "))
+print(f'Posição da Ocorrência: {modulo.indexar(lista, indice_num)}')
+
+# 7:
+print(f'Sortear Lista: {modulo.sortear(lista)}')
+
+# 8:
+print(f'Reverso na Lista: {modulo.reverso(lista)}')
 
 
