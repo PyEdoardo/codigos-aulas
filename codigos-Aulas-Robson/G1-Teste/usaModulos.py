@@ -10,7 +10,6 @@ while True:
     notas = []
 
     for i in range(4):
-        print('\n')
         nota = float(input("Digite a Nota: "))
         notas.append(nota)
 
@@ -19,3 +18,21 @@ while True:
 
     alunos.append([nome, notas, media, situacao])
 
+i = 0
+qtReprovados = 0
+while i < len(alunos):
+    if alunos[i][3] == 'Reprovado':
+        qtReprovados = qtReprovados + 1
+    i = i + 1    
+
+i = 0
+print("\nEscola Primavera - Gestão de Alunos\n-----------------------------------------------------")
+while i < len(alunos):
+    print(f'Nome: {alunos[i][0]} | Notas: {alunos[i][1]}')
+    print(f'Média: {alunos[i][2]} | Situação: {alunos[i][3]}')
+    print('-----------------------')
+    
+    
+    i = i + 1
+print(f'\nForam Processados {len(alunos)} alunos')
+print(f'Total de Alunos Reprovados: {qtReprovados}')
