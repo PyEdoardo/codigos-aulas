@@ -19,9 +19,13 @@ while True:
     alunos.append([nome, notas, media, situacao])
 
 i = 0
+qtAprovados = 0
 qtReprovados = 0
+
 while i < len(alunos):
-    if alunos[i][3] == 'Reprovado':
+    if alunos[i][3] == 'Aprovado':
+        qtAprovados = qtAprovados + 1
+    elif alunos[i][3] == 'Reprovado':
         qtReprovados = qtReprovados + 1
     i = i + 1    
 
@@ -35,4 +39,5 @@ while i < len(alunos):
     
     i = i + 1
 print(f'\nForam Processados {len(alunos)} alunos')
+print(f'Total de Alunos Aprovados: {qtAprovados}')
 print(f'Total de Alunos Reprovados: {qtReprovados}')
