@@ -8,4 +8,5 @@ def situacaoAluno(media):
     else:
         return "Reprovado"
 
+def maiorNota(alunos):
     
