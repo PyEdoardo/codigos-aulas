@@ -17,4 +17,15 @@ def maiorMedia(alunos):
             maiorMedia = alunos[i][2]
             nomeMaior = alunos[i][0]
         i = i + 1    
-    return maiorMedia, nomeMaior       
+    return maiorMedia, nomeMaior
+
+def menorMedia(alunos):
+    menorMedia = 9999
+    nomeMenor = ''
+    i = 0
+    while i > len(alunos):
+        if alunos[i][2] < menorMedia:
+            menorMedia = alunos[i][2]
+            nomeMenor = alunos[i][0]
+        i = i + 1    
+    return menorMedia, nomeMenor      
