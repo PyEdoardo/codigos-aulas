@@ -41,3 +41,4 @@ while i < len(alunos):
 print(f'\nForam Processados {len(alunos)} alunos')
 print(f'Total de Alunos Aprovados: {qtAprovados}')
 print(f'Total de Alunos Reprovados: {qtReprovados}')
+print(f'Maior Media: {modulos.maiorMedia(alunos)}')

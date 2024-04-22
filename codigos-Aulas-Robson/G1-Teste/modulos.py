@@ -8,6 +8,13 @@ def situacaoAluno(media):
     else:
         return "Reprovado"
 
-def maiorNota(alunos):
-    maiorNota = 0
-    
+def maiorMedia(alunos):
+    maiorMedia = 0
+    nomeMaior = ''
+    i = 0
+    while i < len(alunos):
+        if alunos[i][2] > maiorMedia:
+            maiorMedia = alunos[i][2]
+            nomeMaior = alunos[i][0]
+        i = i + 1    
+    return maiorMedia, nomeMaior       
