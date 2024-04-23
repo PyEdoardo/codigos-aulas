@@ -23,9 +23,15 @@ def menorMedia(alunos):
     menorMedia = 9999
     nomeMenor = ''
     i = 0
-    while i > len(alunos):
+    while i < len(alunos):
         if alunos[i][2] < menorMedia:
             menorMedia = alunos[i][2]
             nomeMenor = alunos[i][0]
         i = i + 1    
-    return menorMedia, nomeMenor      
+    return menorMedia, nomeMenor
+
+def doisPrimeiros(alunos):
+    return alunos[:2]
+
+def doisUltimos(alunos):
+    return alunos[:-2]      

@@ -43,3 +43,9 @@ print(f'Total de Alunos Aprovados: {qtAprovados}')
 print(f'Total de Alunos Reprovados: {qtReprovados}')
 print(f'Maior Media: {modulos.maiorMedia(alunos)}')
 print(f'Menor Media: {modulos.menorMedia(alunos)}')
+print(f'Dois Primeiros Alunos: {modulos.doisPrimeiros(alunos)}')
+print(f'Dois Ùltimos Alunos: {modulos.doisUltimos(alunos)}')
+i = 0
+while i < len(alunos):
+    print(alunos[i][0].sorted())
+    i = i + 1
