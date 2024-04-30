@@ -1,22 +1,22 @@
 def valorTotalEstoque(produtos):
-    i = 0
-    estoque = 0
-    while i < len(produtos):
-        estoque = estoque + produtos[i][1]
-        valorDoEstoque = estoque * produtos[i][2]
-        i = i + 1
-    return valorDoEstoque
+    soma = 0
+    for produto in produtos:
+        soma += produto[1] * produto[2]
+    return soma
 
 def produtosInferiorADez(produtos):
     i = 0
     nomeItensMenorEstoque = []
+    itensMenorEstoque = []
     while i < len(produtos):
         if produtos[i][1] < 10:
+            itemMenor = produtos[i][1]
+            itensMenorEstoque.append(itemMenor)
             nomeItem = produtos[i][0]
             nomeItensMenorEstoque.append(nomeItem)
         i = i + 1
-    if sum(nomeItensMenorEstoque) < 10:
-        return 'Nenhum item ficou abaixo de 10'    
+    if sum(itensMenorEstoque) < 10:
+        return 'Sem itens menores que 10! '
     return nomeItensMenorEstoque
 
 def produtoMaisCaro(produtos):
@@ -51,6 +51,8 @@ def doisPrimeiros(produtos):
         while i < len(produtos):
             primeiros.append(produtos[i][0])
             i = i + 1
+    if len(primeiros) < 2:
+        primeiros.pop()
     return primeiros
 
 def doisUltimos(produtos):
