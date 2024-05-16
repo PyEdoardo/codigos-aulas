@@ -49,4 +49,6 @@ while True:
             novoNome = input("Digite o novo nome: ")
             novoAcesso = input("Qual seria a nova data: ")
             novoId = input("Digite o Novo ID: ")
+            listaNovos = [novoNome, novoAcesso, novoId]
             print(f'Nome Antigo: {usuarios[loginModificado]['nome']} | Nome Novo: {novoNome}\nData Antiga: {usuarios[loginModificado]['ultimo_acesso']} | Nova Data: {novoAcesso}\nID Antigo: {usuarios[loginModificado]['id_maquina']} | ID Novo: {id_maquina}')
+            

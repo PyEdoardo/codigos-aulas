@@ -25,4 +25,8 @@ def modificarID(login, novoID, usuarios):
     usuarios[login]['id_maquina'] = novoID
     return 'ID Alterado!'
         
-          
+def modificarTudo(login, tudoNovo, usuarios):
+    usuarios[login]['nome'] = tudoNovo[0]
+    usuarios[login]['ultimo_acesso'] = tudoNovo[1]
+    usuarios[login]['id_maquina'] = tudoNovo[2]
+    return 'Tudo Alterado!'
