@@ -16,7 +16,7 @@ while True:
         print("Login já cadastrado!")
 
 while True:
-    opcao = int(input("Qual opção deseja? \n1: Listar todos os nomes de usuários\n2: Listar dados de um usuário\n3: Listar os nomes de usuários de uma data específica\n4: Alterar dados de um usuário\n5: Excluir um usuário\n6: Sair) "))
+    opcao = int(input("Qual opção deseja? \n1: Listar todos os nomes de usuários\n2: Listar dados de um usuário\n3: Listar os nomes de usuários de uma data específica\n4: Alterar dados de um usuário\n5: Excluir um usuário\n6: Sair\nDeseja qual opção:  "))
     
     if opcao == 6:
         break
@@ -25,7 +25,7 @@ while True:
             print(f'Nome: {usuarios[chave]["nome"]}')
     elif opcao == 2: 
         proc_user = input("Qual o Login a ser procurado: ")
-        funcs.usuarios(proc_user, usuarios)
+        print(f'{funcs.procLogin(proc_user, usuarios)}')
     elif opcao == 3:
         dataProc = input("Qual a data a ser pesquisada: ")
         print(f'{funcs.procData(dataProc, usuarios)}')
@@ -35,6 +35,18 @@ while True:
         loginModificado = input("Qual o login que pretende modificar: ")
         if oqModificar == 'nome':
             novoNome = input("Digite o novo nome: ")
-            print(f'Nome Antigo: {usuarios[loginModificado]["nome"]}, Novo Nome: {funcs.modificarNome(loginModificado, novoNome, usuarios)}')
-
-
+            print(f'Nome Antigo: {usuarios[loginModificado]['nome']} | Nome Novo: {novoNome}')
+            funcs.modificarNome(loginModificado, novoNome, usuarios)
+        elif oqModificar == 'ultimo' or oqModificar == 'ultimo acesso' or oqModificar == 'último acesso':
+            novoAcesso = input("Qual seria a nova data: ")
+            print(f'Data Antiga: {usuarios[loginModificado]['ultimo_acesso']} | Nova Data: {novoAcesso}')
+            funcs.modificarData(login=loginModificado, novaData=novoAcesso, usuarios=usuarios)
+        elif oqModificar == 'id' or oqModificar == 'id maquina' or oqModificar == 'id da maquina':
+            novoId = input("Digite o Novo ID: ")
+            print(f'ID Antigo: {usuarios[loginModificado]['id_maquina']} | Novo ID: {novoId}')
+            funcs.modificarID(loginModificado, novoId, usuarios)
+        elif oqModificar == 'todos' or oqModificar == 'tudo' or oqModificar == 'todo':
+            novoNome = input("Digite o novo nome: ")
+            novoAcesso = input("Qual seria a nova data: ")
+            novoId = input("Digite o Novo ID: ")
+            print(f'Nome Antigo: {usuarios[loginModificado]['nome']} | Nome Novo: {novoNome}\nData Antiga: {usuarios[loginModificado]['ultimo_acesso']} | Nova Data: {novoAcesso}\nID Antigo: {usuarios[loginModificado]['id_maquina']} | ID Novo: {id_maquina}')
