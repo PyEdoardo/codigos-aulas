@@ -30,3 +30,7 @@ def modificarTudo(login, tudoNovo, usuarios):
     usuarios[login]['ultimo_acesso'] = tudoNovo[1]
     usuarios[login]['id_maquina'] = tudoNovo[2]
     return 'Tudo Alterado!'
+
+def apagarUsuario(login, usuarios):
+    del usuarios[login]
+    return 'Usuário Apagado!'
