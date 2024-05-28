@@ -3,6 +3,6 @@ from kivy.uix.button import Button
 
 class Teste(App):
     def build(self):
-        return Button()
+        return Button(text=f'{None}')
 
 Teste().run()
