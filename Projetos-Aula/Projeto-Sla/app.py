@@ -3,10 +3,8 @@ from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 
-class Incrementador(BoxLayout):
-    pass
-
-class Teste(App):
+class MeuApp(App):
     def build(self):
-        return Incrementador()
-Teste().run()
+        return Button(text= 'Sla')
+
+MeuApp().run()
