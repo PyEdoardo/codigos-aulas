@@ -1,0 +1,7 @@
+matricula,nome,n1,n2
+001,Ana,10,10
+002,Beto,8,7
+003,Carla,7,7
+004,Daniel,5,7
+005,Eva,6,8
+006,Joao,8,5
