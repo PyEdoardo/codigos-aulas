@@ -55,11 +55,11 @@ entrada_moeda1.pack(pady=12, padx=12)
 entrada_moeda2 = ctk.CTkEntry(master=frame, placeholder_text=f'Moeda 2')
 entrada_moeda2.pack(pady=12, padx=12)
 
-botao = ctk.CTkButton(master=frame, text='Verificar Cotação', command=mostrarConversao)
-botao.pack(pady=12, padx=12)
-
 entrada_valor_moeda = ctk.CTkEntry(master= frame, placeholder_text=f'Quanto gostaria de converter: ')
 entrada_valor_moeda.pack(pady=12, padx=12)
+
+botao = ctk.CTkButton(master=frame, text='Verificar Cotação', command=mostrarConversao)
+botao.pack(pady=12, padx=12)
 
 nome_conv = ctk.CTkLabel(master= frame, text= '')
 nome_conv.pack(pady=12, padx=12)
