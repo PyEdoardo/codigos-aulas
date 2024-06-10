@@ -1,0 +1,62 @@
+{
+  "001": {
+    "nome": "Lucas Oliveira",
+    "nota1": 10.0,
+    "nota2": 10.0,
+    "percentualFrequencia": 75
+  },
+  "002": {
+    "nome": "Mariana Santos",
+    "nota1": 9.0,
+    "nota2": 6.0,
+    "percentualFrequencia": 100
+  },
+  "003": {
+    "nome": "Pedro Almeida",
+    "nota1": 8.0,
+    "nota2": 7.0,
+    "percentualFrequencia": 80
+  },
+  "004": {
+    "nome": "Juliana Silva",
+    "nota1": 8.0,
+    "nota2": 5.0,
+    "percentualFrequencia": 90
+  },
+  "005": {
+    "nome": "Fernando Pereira",
+    "nota1": 5.0,
+    "nota2": 6.0,
+    "percentualFrequencia": 75
+  },
+  "006": {
+    "nome": "Camila Costa",
+    "nota1": 9.6,
+    "nota2": 5.2,
+    "percentualFrequencia": 75
+  },
+  "007": {
+    "nome": "Gabriel Rocha",
+    "nota1": 1.0,
+    "nota2": 2.0,
+    "percentualFrequencia": 78
+  },
+  "008": {
+    "nome": "Amanda Martins",
+    "nota1": 1.0,
+    "nota2": 2.0,
+    "percentualFrequencia": 90
+  },
+  "009": {
+    "nome": "Ricardo Lima",
+    "nota1": 10.0,
+    "nota2": 9.0,
+    "percentualFrequencia": 30
+  },
+  "010": {
+    "nome": "Isabela Souza",
+    "nota1": 7.0,
+    "nota2": 9.0,
+    "percentualFrequencia": 40
+  }
+}
