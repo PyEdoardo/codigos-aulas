@@ -1,0 +1,3 @@
+Matricula: 1, Nome: Edo, G1: 10.0, G2: 10.0
+Matricula: 001, Nome: Edo, G1: 10.0, G2: 10.0
+Matricula: 002, Nome: Gabriel, G1: 10.0, G2: 10.0

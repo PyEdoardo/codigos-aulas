@@ -9,3 +9,5 @@ for aluno in notasString[1:]:
     alunos[matricula] = {"nome" : nome, "g1" : g1, "g2" : g2, "mp" : round(mp, 1)}
 
 print(alunos)
+
+funcoes.salvarMP('mp.txt', alunos)
