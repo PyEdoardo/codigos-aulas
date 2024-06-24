@@ -29,26 +29,7 @@ def situacaoAlunos(arquivojson):
     arquivo.close()
     return situacao
 
-def alterarNotas(matricula, nota1, nota2, arquivojson):
-    arquivo = open(arquivojson, 'r', encoding='utf8')
-    leitura = arquivo.read()
-    alunos = {}
-    if leitura:
-        alunos = json.loads(leitura)
-    arquivo.close()
-    if matricula not in alunos:
-        return 'Não existe essa matrícula!'
-    else:
-        alunos[matricula]['nota1'] = nota1
-        alunos[matricula]['nota2'] = nota2
-    return alunos[matricula]
-
-def salvarNoJson(arquivojson, alunoModificados):
-    arquivo = open(arquivojson, 'w', encoding='utf8')
-    alunos = json.dumps(alunoModificados, indent=4, ensure_ascii=False)
-    arquivo.write(alunos)
-    arquivo.close()
-    return 'Arquivo Modificado'
+def alterarSituacao(alunos ,matriculaAlterar, nota1Nova, nota2Nova, arquivojson):
     
 
 
