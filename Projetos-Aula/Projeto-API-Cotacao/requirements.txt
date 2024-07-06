@@ -23,7 +23,7 @@ PyQt5-Qt5==5.15.2
 PyQt5-sip==12.13.0
 PySimpleGUI==5.0.4
 pywin32==306
-requests==2.31.0
+requests==2.32.2
 rsa==4.9
 sqlparse==0.5.0
 tzdata==2024.1
