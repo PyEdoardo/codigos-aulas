@@ -18,7 +18,9 @@ public class Frame1 extends javax.swing.JFrame {
     public Frame1() {
         initComponents();
     }
-
+    public boolean deveAlistar(String sexo, int idade){
+        return idade >= 18 && sexo.equalsIgnoreCase(sexo);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,6 +32,7 @@ public class Frame1 extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,6 +50,13 @@ public class Frame1 extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setText("Alistar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -55,7 +65,8 @@ public class Frame1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addContainerGap(322, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -65,7 +76,9 @@ public class Frame1 extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
-                .addContainerGap(216, Short.MAX_VALUE))
+                .addGap(50, 50, 50)
+                .addComponent(jButton3)
+                .addContainerGap(143, Short.MAX_VALUE))
         );
 
         pack();
@@ -80,6 +93,17 @@ public class Frame1 extends javax.swing.JFrame {
         String nome = JOptionPane.showInputDialog("Nome: ");
         JOptionPane.showMessageDialog(null, "Olá "+nome);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        int idade = Integer.parseInt(JOptionPane.showInputDialog("Idade: "));
+        String sexo = JOptionPane.showInputDialog("Sexo: ");
+        if ( deveAlistar(sexo, idade) ){
+            JOptionPane.showMessageDialog(null, "Deve se Alistar!");
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Não deve se Alistar!");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,5 +143,6 @@ public class Frame1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     // End of variables declaration//GEN-END:variables
 }
