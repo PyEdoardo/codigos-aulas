@@ -78,7 +78,7 @@ public class Frame1 extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String nome = JOptionPane.showInputDialog("Nome: ");
-        JOptionPane.showMessageDialog(null, nome);
+        JOptionPane.showMessageDialog(null, "Olá "+nome);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
