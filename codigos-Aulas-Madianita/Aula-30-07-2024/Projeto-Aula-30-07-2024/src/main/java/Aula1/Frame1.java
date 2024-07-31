@@ -12,14 +12,38 @@ package Aula1;
 import javax.swing.JOptionPane;
 public class Frame1 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Frame1
-     */
+int ANO_ATUAL = 2024;
+int MES_ATUAL = 7;
+
     public Frame1() {
         initComponents();
     }
     public boolean deveAlistar(String sexo, int idade){
         return idade >= 18 && sexo.equalsIgnoreCase(sexo);
+    }
+    public boolean maior_de_idade(int idade){
+        return idade >= 18;
+    }
+    public int calcular_idade(int dia,int mes,int ano){
+        int idade;
+        if (mes > MES_ATUAL || (mes == MES_ATUAL && dia > 29)){
+            idade = ANO_ATUAL - ano - 1;
+        }
+        else{
+            idade = ANO_ATUAL - ano;
+        }
+        return idade;
+    }
+    public boolean deve_se_alistar(int idade, String sexo, String nacionalidade){
+        if (nacionalidade.equalsIgnoreCase("Brasileira") && maior_de_idade(idade)){
+            if (sexo.equalsIgnoreCase(" Masculino")){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        return false;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -33,6 +57,9 @@ public class Frame1 extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,6 +84,27 @@ public class Frame1 extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setText("Maior de Idade");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Calcular Idade");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("Deve se Alistar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,19 +112,39 @@ public class Frame1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addContainerGap(322, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton5))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton4)))
+                        .addGap(15, 15, 15))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton3)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(274, 274, 274)
+                                .addComponent(jButton6)))
+                        .addContainerGap(14, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton4))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton5))
+                .addGap(18, 18, 18)
+                .addComponent(jButton6)
+                .addGap(9, 9, 9)
                 .addComponent(jButton3)
                 .addContainerGap(143, Short.MAX_VALUE))
         );
@@ -104,6 +172,30 @@ public class Frame1 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Não deve se Alistar!");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        int idade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a Idade"));
+        if (maior_de_idade(idade)){
+            JOptionPane.showMessageDialog(null, "Maior de Idade!");
+    }
+        else{
+            JOptionPane.showMessageDialog(null, "Menor de Idade!");
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        int dia = Integer.parseInt(JOptionPane.showInputDialog("Digite o Dia de Nascimento: "));
+        int mes = Integer.parseInt(JOptionPane.showInputDialog("Digite o Mês de Nascimento"));
+        int ano = Integer.parseInt(JOptionPane.showInputDialog("Digite o Ano de Nascimento: "));
+        
+        JOptionPane.showMessageDialog(null, calcular_idade(dia, mes, ano));
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        int idade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a Sua Idade: "));
+        String sexo JOptionPane.showInputDialog(null, "Digite o seu Sexo: ");
+        
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,5 +236,8 @@ public class Frame1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     // End of variables declaration//GEN-END:variables
 }
