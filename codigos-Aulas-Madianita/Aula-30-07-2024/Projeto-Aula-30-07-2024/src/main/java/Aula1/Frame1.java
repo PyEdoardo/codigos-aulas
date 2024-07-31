@@ -36,7 +36,7 @@ int MES_ATUAL = 7;
     }
     public boolean deve_se_alistar(int idade, String sexo, String nacionalidade){
         if (nacionalidade.equalsIgnoreCase("Brasileira") && maior_de_idade(idade)){
-            if (sexo.equalsIgnoreCase(" Masculino")){
+            if (sexo.equalsIgnoreCase("Masculino")){
                 return true;
             }
             else{
@@ -193,8 +193,14 @@ int MES_ATUAL = 7;
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         int idade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a Sua Idade: "));
-        String sexo JOptionPane.showInputDialog(null, "Digite o seu Sexo: ");
-        
+        String sexo = JOptionPane.showInputDialog(null, "Digite o Sexo: ");
+        String nacionalidade = JOptionPane.showInputDialog(null, "Digite a sua Nacionalidade: ");
+        if (deve_se_alistar(idade, sexo, nacionalidade)){
+            JOptionPane.showMessageDialog(null, "Deverá se Alistar!");
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Não precisa se alistar!");
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
