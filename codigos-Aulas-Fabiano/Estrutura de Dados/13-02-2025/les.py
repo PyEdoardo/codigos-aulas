@@ -6,4 +6,4 @@ class Les:
     def inserir_fim(self, valor):
         self.vetor[self.quant] = valor
         self.quant += 1
-        
+    
