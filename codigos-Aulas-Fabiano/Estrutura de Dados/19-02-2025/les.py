@@ -7,7 +7,13 @@ class Les:
     def inserir_fim(self, valor):
         self.vetor[self.quant] = valor
         self.quant += 1
-        
+
+    def inserir_inicio(self, valor):
+        for i in range(self.quant, 0, -1):
+            self.vetor[i] = self.vetor[i - 1]
+        self.vetor[0] = valor
+        self.quant += 1
+
     def show(self):
         for i in range(self.quant):
             print(self.vetor[i], end=' ')
