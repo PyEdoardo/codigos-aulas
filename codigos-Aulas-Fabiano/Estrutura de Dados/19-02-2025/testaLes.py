@@ -8,4 +8,7 @@ l.inserir_inicio("C")
 l.inserir_fim("D")
 l.show()
 
+l.remover_inicio()
+l.remover_inicio()
+l.show()
 
