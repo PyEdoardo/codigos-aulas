@@ -64,7 +64,7 @@ l2.inserir_antes("L", "D")
 l2.show()
 if l1.get_quant() > l2.get_quant():
     print("l1 é maior que l2")
-elif i.get_quant() < l2.get_quant():
+elif l1.get_quant() < l2.get_quant():
     print("l2 é maior que l1")
 else:
     print("As duas tem o mesmo tamanho")

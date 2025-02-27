@@ -41,7 +41,7 @@ class Les:
     def buscar_indice(self, valor):
         indice = 0
         for i in range(self.quant):
-            if self.vetor[i] == self.quant:
+            if self.vetor[i] == valor:
                 indice = int(i)
                 return indice
 
@@ -49,7 +49,6 @@ class Les:
         indice = self.buscar_indice(valAntes)
         if indice == -1:
             return "Nenhum valor"
-        
         pos_inserir = indice + 1
 
         i = self.quant
@@ -65,7 +64,6 @@ class Les:
 
         if indice == -1:
             return "Nenhum valor"
-        
         i = self.quant
 
         while i > indice:
