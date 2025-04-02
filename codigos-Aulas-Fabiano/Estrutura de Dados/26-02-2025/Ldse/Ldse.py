@@ -56,5 +56,5 @@ class Ldse:
     def show(self):
         aux = self.prim
         for i in range(self.quant):
-            print(f'Valor: {aux.info} | Quant: {self.quant}')
+            print(f'Valor: {aux.info} | Quant: {i}')
             aux = aux.prox

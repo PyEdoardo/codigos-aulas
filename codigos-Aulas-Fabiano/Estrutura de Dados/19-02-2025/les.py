@@ -44,6 +44,7 @@ class Les:
             if self.vetor[i] == valor:
                 indice = int(i)
                 return indice
+        return
 
     def inserir_apos(self, valAntes, valDepois):
         indice = self.buscar_indice(valAntes)
