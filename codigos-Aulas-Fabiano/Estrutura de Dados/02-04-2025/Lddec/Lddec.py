@@ -45,7 +45,7 @@ class Lddec:
         prox = aux.prox
         ant = aux.ant
         for i in range(self.quant):
-            print(f'Valor: {aux.info} | Próximo: {prox.info} | Anterior: {ant.info}')
+            print(f'Valor: {aux.info} | Anterior: {prox.info} | Próximo: {ant.info}')
             aux = aux.ant
             prox = aux.prox
             ant = aux.ant
@@ -54,6 +54,32 @@ class Lddec:
         if len(valores) <= 1:
             return
         for i in valores:
-            self.ult.prox = self.ult = No(self.ult, i, self.prim)
-            self.ult.ant = self.ult
-            self.quant += 1
+            self.inserir_final(i)
+        
+    def sort(self):
+        if self.quant < 2:
+            return
+        valores = []
+        aux = self.prim
+        for i in range(self.quant):
+            valores.append(aux.info)
+            aux = aux.prox
+        valores.sort()
+        aux = self.prim
+        for valor in valores:
+            aux.info = valor
+            aux = aux.prox
+    
+    def reverse(self):
+        if self.quant < 2:
+            return
+        valores = []
+        aux = self.prim
+        for i in range(self.quant):
+            valores.append(aux.info)
+            aux = aux.prox
+        aux = self.prim
+        valores.sort(reverse=True)
+        for valor in valores:
+            aux.info = valor
+            aux = aux.prox
