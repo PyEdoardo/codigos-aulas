@@ -65,6 +65,57 @@ class Ldde:
                 ant.ant = aux.ant
                 self.quant -= 1
                 return
+    def reverse(self):
+        if self.quant < 2:
+            return
+        valores = []
+        aux = self.prim
+        for i in range(self.quant):
+            valores.append(aux.info)
+            aux = aux.prox
+        aux = self.prim
+        valores.reverse()
+        for valor in valores:
+            aux.info
+            aux.prox
+    
+    def sort(self):
+        if self.quant < 2:
+            return
+        valores = []
+        aux = self.prim
+        for i in range(self.quant):
+            valores.append(aux.info)
+            aux = aux.prox
+        valores.sort()
+
+        aux = self.prim
+        for valor in valores:
+            aux.info = valor
+            aux = aux.prox
+        
+    def reverse(self):
+        if self.quant < 2:
+            return
+        valores = []
+        aux = self.prim
+        for i in range(self.quant):
+            valores.append(aux.info)
+            aux = aux.prox
+        valores.sort(reverse=True)
+
+        aux = self.prim
+        for valor in valores:
+            aux.info = valor
+            aux = aux.prox
+    
+    def inserir_valores_final(self, *val):
+        if len(val) <= 1:
+            return
+        for i in val:
+            self.ult.prox = self.ult = No(self.ult, i, None)
+            self.quant += 1
+        
     
         
                 

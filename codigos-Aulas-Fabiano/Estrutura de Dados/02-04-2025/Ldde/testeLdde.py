@@ -2,16 +2,9 @@ import Ldde
 
 l = Ldde.Ldde()
 
-l.inserir_inicio(1)
-
-l.inserir_final(5)
-
-l.inserir_final(10)
-
-l.inserir_inicio(100)
-
+l.inserir_inicio(50)
+l.inserir_final(100)
+l.inserir_valores_final(1,2,3,4,5,5,3)
 l.show()
 
-l.remover_val(10)
 
-l.show()
