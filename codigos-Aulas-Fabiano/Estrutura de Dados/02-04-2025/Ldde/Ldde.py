@@ -54,9 +54,17 @@ class Ldde:
             aux = aux.ant
 
     def remover_val(self, valor):
-        aux, aux2 = None
-        while aux.info is not None:
+        aux = self.prim
+        ant = None
+        while aux is not None:
             if aux.info != valor:
+                ant = aux
                 aux = aux.prox
             else:
-
+                ant.prox = aux.prox
+                ant.ant = aux.ant
+                self.quant -= 1
+                return
+    
+        
+                

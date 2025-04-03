@@ -12,3 +12,6 @@ l.inserir_inicio(100)
 
 l.show()
 
+l.remover_val(10)
+
+l.show()
