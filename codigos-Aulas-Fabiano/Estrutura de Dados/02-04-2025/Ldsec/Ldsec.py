@@ -1,4 +1,4 @@
-class No:
+class No: 
     def __init__(self, valor, proximo):
         self.info = valor
         self.prox = proximo
@@ -24,7 +24,7 @@ class Ldsec:
             self.ult.prox = self.ult = No(valor, None)
         self.quant += 1
 
-    def remover_inicio(self, valor):
+    def remover_inicio(self):
         if self.quant == 1:
             self.prim = self.ult = None
         else:

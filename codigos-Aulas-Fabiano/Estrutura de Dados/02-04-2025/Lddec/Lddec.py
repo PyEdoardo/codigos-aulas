@@ -1,13 +1,13 @@
-class No:
+class No: #Este objeto guarda o um valor, um "ponteiro" para o próximo nó, e outro "ponteiro" para o nó anterior.
     def __init__(self, anterior, valor, proximo):
         self.ant = anterior
         self.info = valor
         self.prox = proximo
 
 class Lddec:
-    def __init__(self):
+    def __init__(self): #Construtor que deixa o "head/prim" e o "tail/ult" como None
         self.prim = self.ult = None
-        self.quant = 0
+        self.quant = 0 #Esse quant basicamente regra a estrutura, fazendo o controle da quantidade de nós dentro da Lista
     
     def inserir_inicio(self, valor):
         if self.quant == 0:
