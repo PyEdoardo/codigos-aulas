@@ -21,7 +21,7 @@ class Ldsec:
             self.prim = self.ult = No(valor, None)
             self.prim.prox = self.prim
         else:
-            self.ult.prox = self.ult = No(valor, None)
+            self.ult.prox = self.ult = No(valor, self.prim)
         self.quant += 1
 
     def remover_inicio(self):
@@ -50,8 +50,22 @@ class Ldsec:
     
     def remover_val(self, valor):
         aux = self.prim
-        while aux is not None:
-            if aux.info != valor:
-                aux = aux.prox
-            else:
-                pass
+        ant = None
+        for i in range(self.quant):
+            if aux.info == valor:
+                if aux == self.prim:
+                    if self.quant == 1:
+                        self.prim == None
+                    else:
+                        ult = self.prim
+                        while ult.prox != self.prim:
+                            ult = ult.prox
+                        self.prim = aux.prox
+                        ult.prox = self.prim
+                else:
+                    ant.prox = aux.prox
+                self.quant -= 1
+                return
+            anterior = aux
+            aux = aux.prox
+                   

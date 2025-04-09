@@ -23,9 +23,43 @@ class Lddec:
         else:
             self.ult.prox = self.ult = No(self.ult, valor, self.prim)
             self.prim.ant = self.ult
-        self.quant += 1
-        
-        
+        self.quant += 1  
+
+    def remover_inicio(self):
+        if self.quant == 1:
+            self.prim = self.ult = None
+        else:
+            self.ult.prox = self.prim = self.prim.prox
+            self.prim.ant = self.ult
+        self.quant -= 1
+
+    def remover_fim(self):
+        if self.quant == 1:
+            self.prim = self.ult = None
+        else:
+            self.prim.ant = self.ult = self.ult.ant
+            self.ult.prox = self.prim
+        self.quant -= 1    
+
+    def remover_val(self, valor):
+        if self.quant == 1:
+            self.prim = self.ult = None
+        else:
+            aux = self.prim
+            for i in range(self.quant):
+                if aux.info == valor:
+                    if self.quant == 1:
+                        self.prim = None
+                    else:
+                        aux.ant.prox = aux.prox
+                        aux.prox.ant = aux.ant
+                        if aux == self.prim:
+                            self.prim = aux.prox
+                    self.quant -= 1
+                    return
+                aux = aux.prox
+
+
     def show(self):
         aux = self.prim
         
