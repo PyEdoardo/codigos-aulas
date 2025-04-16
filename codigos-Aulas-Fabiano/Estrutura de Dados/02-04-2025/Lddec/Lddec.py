@@ -117,3 +117,15 @@ class Lddec:
         for valor in valores:
             aux.info = valor
             aux = aux.prox
+    
+    def adicionar_val_pos(self, valor, pos):
+        if pos < self.quant:
+            return
+        aux = self.prim
+        ant = None
+        i = 0
+        while  i < pos:
+            aux = aux.prox 
+            i += 1
+        aux.ant = No(aux, valor, aux.prox)
+        

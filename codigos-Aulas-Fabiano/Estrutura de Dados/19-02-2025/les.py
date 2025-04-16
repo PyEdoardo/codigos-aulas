@@ -59,6 +59,19 @@ class Les:
             i -= 1
         self.vetor[pos_inserir] = valAntes
         self.quant += 1
+
+    def remover_val(self, valor):
+        pos = -1
+        for i in range(self.quant):
+            if self.vetor[i] == valor:
+                pos = 1
+        if pos != -1:
+            for j in range(pos, self.quant - 1):
+                self.vetor[j] = self.vetor[j + 1]
+            self.quant -= 1
+        
+    def getQuant(self):
+        return self.quant
     
     def inserir_antes(self, valAntes, valDepois):
         indice = self.buscar_indice(valAntes)
@@ -72,3 +85,10 @@ class Les:
             i -= 1
         self.vetor[indice] = valDepois
         self.quant += 1
+
+    def duplicar_quant(self):
+        novaLista = [None] * (self.tam * 2)
+        for i in range(self.quant):
+            novaLista[i] = self.vetor[i]
+        self.vetor = novaLista
+        self.quant = self.quant * 2

@@ -66,6 +66,6 @@ class Ldsec:
                     ant.prox = aux.prox
                 self.quant -= 1
                 return
-            anterior = aux
             aux = aux.prox
-                   
+    
+            
