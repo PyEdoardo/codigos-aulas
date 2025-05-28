@@ -1,7 +1,7 @@
 import ArvoreBin
 
 a = ArvoreBin.ArvoreBin()
-valores = [50, 30, 70, 20, 40, 60, 80]
+valores = [10, 230, 20, 30, 10, 1, 0, 2, 50]
 
 for valor in valores:
     a.inserir(valor)
