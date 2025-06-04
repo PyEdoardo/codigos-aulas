@@ -39,11 +39,3 @@ class Abb:
             print(f'Valor: {no.info}')
             self._show(no.dir)
     
-    def mostrar_grafico(self):
-        self._mostrar_grafico(self.raiz, 0)
-
-    def _mostrar_grafico(self, no: No, nivel):
-        if no is not None:
-            self._mostrar_grafico(no.dir, nivel + 1)
-            print(f'   ' * nivel + f'-> {no.info}')
-            self._mostrar_grafico(no.esq, nivel + 1)
