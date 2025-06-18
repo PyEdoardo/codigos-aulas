@@ -16,6 +16,44 @@ class No:
             else:
                 self.dir.insere(valor)
 
+    def mostrar_caminho(self, valor): ##mostra caminho até o valor
+        print(self.info)
+        if self.info == valor:
+            return
+        elif valor < self.info and self.esq != None:
+            self.esq.mostrar_caminho(valor)
+        elif valor > self.info and self.dir != None
+            self.dir.mostrar_caminho(valor)
+
+    def conta_quantos(self, valor): #quantas vezes tem um valor repetido
+        cont = 0
+        if self.info == valor:
+            cont = 1
+        
+        if self.esq != None:
+            cont += self.esq.conta_quantos(valor)
+        if self.dir != None:
+            cont += self.dir.conta_quantos(valor)
+        
+        return cont
+    
+    def maior_filho(self, valor):
+    # Busca o nó com o valor
+        if self.info == valor:
+            maior = None
+            if self.esq and self.dir:
+                maior = max(self.esq.info, self.dir.info)
+            elif self.esq:
+                maior = self.esq.info
+            elif self.dir:
+                maior = self.dir.info
+            return maior
+        
+        elif valor < self.info and self.esq != None:
+            return self.esq.maior_filho(valor)
+        elif valor > self.info and self.dir != None:
+            return self.dir.maior_filho(valor)
+
     def busca(self, valor):
         if valor == self.info:
             return True

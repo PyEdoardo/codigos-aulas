@@ -3,7 +3,6 @@ lista_objetos = input("Digite uma lista de objetos separados por vírgulas: ").s
 
 contagem_objetos = {}
 
-
 for objeto in lista_objetos:
 
     objeto = objeto.strip().lower()

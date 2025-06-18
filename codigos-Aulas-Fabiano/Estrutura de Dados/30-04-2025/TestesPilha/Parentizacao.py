@@ -1,13 +1,17 @@
 import Pd
 
-pilha1 = Pd.Pd()
+expressao = input("Digite a expressão: ")
 
-expressao: str = input("Digite a expressão: ")
+def e_valido(expressao: str) -> bool:
+    pilha = Pd.Pd()
+    for i in expressao:
+        match i:
+            case '(':
+                pilha.push(i)
+            case ')':
+                if pilha.esta_vazia():
+                    return False
+                pilha.pop()
+    return pilha.esta_vazia()
 
-for i in expressao:
-    match i:
-        case "(": pilha1.push("(")
-        case ")":
-            if pilha1.esta_vazia():
-                print("Não é válido!")
-                break
+print(e_valido(expressao))
