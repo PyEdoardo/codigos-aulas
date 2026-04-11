@@ -363,5 +363,62 @@
     <a name="circuit" val="Contador"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="2.0"/>
+    <comp lib="0" loc="(390,430)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(410,390)" name="Constant"/>
+    <comp lib="0" loc="(410,410)" name="Constant"/>
+    <comp lib="0" loc="(500,390)" name="Constant"/>
+    <comp lib="0" loc="(500,410)" name="Constant"/>
+    <comp lib="0" loc="(590,390)" name="Constant"/>
+    <comp lib="0" loc="(590,410)" name="Constant"/>
+    <comp lib="0" loc="(680,390)" name="Constant"/>
+    <comp lib="0" loc="(680,410)" name="Constant"/>
+    <comp lib="1" loc="(570,530)" name="AND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="4" loc="(420,380)" name="J-K Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(510,380)" name="J-K Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(600,380)" name="J-K Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(690,380)" name="J-K Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <wire from="(390,430)" to="(410,430)"/>
+    <wire from="(440,440)" to="(440,540)"/>
+    <wire from="(440,540)" to="(530,540)"/>
+    <wire from="(470,390)" to="(480,390)"/>
+    <wire from="(480,390)" to="(480,430)"/>
+    <wire from="(480,430)" to="(480,460)"/>
+    <wire from="(480,430)" to="(500,430)"/>
+    <wire from="(480,460)" to="(550,460)"/>
+    <wire from="(530,440)" to="(530,540)"/>
+    <wire from="(530,540)" to="(570,540)"/>
+    <wire from="(550,460)" to="(550,480)"/>
+    <wire from="(560,390)" to="(570,390)"/>
+    <wire from="(570,390)" to="(570,430)"/>
+    <wire from="(570,430)" to="(590,430)"/>
+    <wire from="(570,530)" to="(570,540)"/>
+    <wire from="(570,540)" to="(620,540)"/>
+    <wire from="(590,460)" to="(590,480)"/>
+    <wire from="(590,460)" to="(750,460)"/>
+    <wire from="(620,440)" to="(620,540)"/>
+    <wire from="(620,540)" to="(710,540)"/>
+    <wire from="(650,390)" to="(660,390)"/>
+    <wire from="(660,390)" to="(660,430)"/>
+    <wire from="(660,430)" to="(680,430)"/>
+    <wire from="(710,440)" to="(710,540)"/>
+    <wire from="(740,390)" to="(750,390)"/>
+    <wire from="(750,390)" to="(750,460)"/>
   </circuit>
 </project>
